@@ -24,6 +24,38 @@ public class Main {
             throw new Exception("Строка не является математической операцией");
         }
 
+
+
+        if (dannye[0].length() > 4)
+            throw new Exception("Неверно введено 1е римское число");
+        if (dannye[2].length() > 4)
+            throw new Exception("Неверно введено 2е римское число");
+
+        if (dannye[0].contains("IIV")){
+            throw new Exception("1е число не 3");
+        }
+        if (dannye[0].contains("IIIV")){
+            throw new Exception("1е число не 2");
+        }
+        if (dannye[0].contains("IIX")){
+            throw new Exception("1е число не 8");
+        }
+        if (dannye[0].contains("IIIX")){
+            throw new Exception("1е число не 7");
+        }
+        if (dannye[2].contains("IIV")){
+            throw new Exception("2е число не 3");
+        }
+        if (dannye[2].contains("IIIV")){
+            throw new Exception("2е число не 2");
+        }
+        if (dannye[2].contains("IIX")){
+            throw new Exception("2е число не 8");
+        }
+        if (dannye[2].contains("IIIX")){
+            throw new Exception("2е число не 7");
+        }
+
         boolean isRoman = isRoman(dannye[0]) && isRoman(dannye[2]);
         boolean isArabic = isArabic(dannye[0]) && isArabic(dannye[2]);
 
