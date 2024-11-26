@@ -55,6 +55,12 @@ public class Main {
         if (dannye[2].contains("IIIX")){
             throw new Exception("2е число не 7");
         }
+        if (dannye[0].contains("IIII")){
+            throw new Exception("Введите правильно число 4");
+        }
+        if (dannye[2].contains("IIII")){
+            throw new Exception("Введите правильно число 4");
+        }
 
         boolean isRoman = isRoman(dannye[0]) && isRoman(dannye[2]);
         boolean isArabic = isArabic(dannye[0]) && isArabic(dannye[2]);
